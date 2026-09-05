@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>KhetSaathi — Privacy Policy</title>
+<style>
+  :root { color-scheme: light; }
+  body {
+    margin: 0;
+    font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background: #F7FAF6;
+    color: #1B4D2E;
+    line-height: 1.6;
+  }
+  header {
+    background: #195B3A;
+    color: #FFFFFF;
+    padding: 40px 20px 32px;
+    text-align: center;
+  }
+  header h1 { margin: 0 0 6px; font-size: 26px; }
+  header p { margin: 0; opacity: 0.85; font-size: 14px; }
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 20px 64px;
+  }
+  .notice {
+    background: #FFF7E6;
+    border: 1px solid #F0C36D;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    font-size: 14px;
+    color: #6B4E00;
+  }
+  section {
+    background: #FFFFFF;
+    border: 1px solid #DDE8DF;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 16px;
+  }
+  h2 { margin-top: 0; font-size: 18px; color: #195B3A; }
+  p { margin: 0 0 12px; color: #33403A; font-size: 15px; }
+  ul { margin: 0 0 12px; padding-left: 20px; color: #33403A; font-size: 15px; }
+  li { margin-bottom: 6px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 12px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #E5EDE6; vertical-align: top; }
+  th { color: #195B3A; font-size: 12px; text-transform: uppercase; letter-spacing: 0.02em; }
+  .required { color: #B3261E; font-weight: 700; }
+  footer {
+    text-align: center;
+    padding: 24px 20px 48px;
+    color: #66736B;
+    font-size: 13px;
+  }
+  a { color: #195B3A; }
+</style>
+</head>
+<body>
+  <header>
+    <h1>KhetSaathi — Privacy Policy</h1>
+    <p>किसान का सच्चा साथी — A farm-management app for farmers in Chhattisgarh, India</p>
+  </header>
+  <main>
+    <div class="notice">
+      <strong>Draft notice:</strong> this page is grounded in what the KhetSaathi app actually does (checked against the live code), not generic boilerplate.
+    </div>
+
+    <section>
+      <h2>1. Who this policy covers</h2>
+      <p>This policy applies to the KhetSaathi mobile app (Android/iOS, package/bundle ID <code>in.khetsaathi.app</code>) and the khetsaathi.in website. KhetSaathi is built for farmers and their designated land-management contractors ("अधिया") in Chhattisgarh, India, to track land records, crop status, expenses, and government land-verification data, in Hindi.</p>
+      <p><strong>Data Fiduciary (DPDP Act term) / Data Controller:</strong> KhetSaathi, Bilaspur, Chhattisgarh, India.</p>
+    </section>
+
+    <section>
+      <h2>2. Personal data we collect</h2>
+      <table>
+        <tr><th>Data</th><th>Collected when</th><th>Why</th></tr>
+        <tr><td>Phone number</td><td>Account registration/login</td><td>Identity + OTP-based login (via Supabase Auth and an SMS/WhatsApp provider)</td></tr>
+        <tr><td>Display name, preferred language</td><td>Profile setup</td><td>Personalizing the Hindi/English UI</td></tr>
+        <tr><td>Precise GPS location (latitude/longitude)</td><td>Only when you tap "use my current location" while adding a land parcel</td><td>Recording where your land is; you can also enter a location manually without sharing device GPS</td></tr>
+        <tr><td>Land records (khasra number, village/tehsil/district, area, verification status)</td><td>You enter these, or they're fetched from Chhattisgarh government sources (Bhuiyan / BhuNaksha) at your request</td><td>Land tracking and cross-checking against official government records</td></tr>
+        <tr><td>Contractor details (name, mobile number)</td><td>Entered by the farmer/group admin</td><td>Sharing land management access with a contractor. This is data about a third party provided by the account holder — see §7.</td></tr>
+        <tr><td>Expense records (amount, category, notes, date)</td><td>You enter these</td><td>Farm expense tracking; no bank/payment integration exists, so no payment-card or bank-account data is ever collected</td></tr>
+        <tr><td>Crop cycle and satellite data (NDVI, crop stage, yield estimates)</td><td>Computed automatically from your land's coordinates</td><td>Crop-health advisory features</td></tr>
+        <tr><td>Voice input</td><td>Only on the web version today, via your browser's own built-in speech recognition, processed by your browser/OS — KhetSaathi's servers do not currently receive raw audio in production</td><td>Hands-free navigation (choosing district/tehsil/village by voice)</td></tr>
+        <tr><td>Crash and error diagnostics (device platform, app version, error message, stack trace, timestamp)</td><td>Automatically, only when the app encounters an unexpected error</td><td>Fixing bugs and crashes</td></tr>
+        <tr><td>Local on-device storage</td><td>Always</td><td>Caching your language preference, UI settings, and offline data on your own device</td></tr>
+      </table>
+      <p>We do <strong>not</strong> currently collect: photos/camera data, precise biometric data, or payment/bank details.</p>
+    </section>
+
+    <section>
+      <h2>3. How we use this data</h2>
+      <ul>
+        <li>Operating the app's core features: land tracking, government-record verification, crop advisory, expense tracking, and contractor access-sharing.</li>
+        <li>Security: detecting and preventing unauthorized account access.</li>
+        <li>Diagnostics: identifying and fixing crashes/errors.</li>
+        <li>We do <strong>not</strong> sell personal data, and we do not use it for third-party advertising.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Who we share data with</h2>
+      <p>KhetSaathi relies on the following service providers ("data processors") to operate. Each receives only the data needed for its specific function:</p>
+      <table>
+        <tr><th>Provider</th><th>Role</th><th>Data received</th><th>Region</th></tr>
+        <tr><td>Supabase</td><td>Database, authentication, backend functions</td><td>All account and land/expense data described above</td><td>Mumbai, India (AWS ap-south-1)</td></tr>
+        <tr><td>SMS/WhatsApp OTP provider (MSG91)</td><td>Delivers OTP messages</td><td>Phone number, OTP code</td><td>India</td></tr>
+        <tr><td>Chhattisgarh state government sources (Bhuiyan, BhuNaksha) / data.gov.in</td><td>Land-record and mandi-price lookups</td><td>Khasra number, village/tehsil/district you query</td><td>India</td></tr>
+        <tr><td>ISRO Bhuvan</td><td>Satellite map tiles</td><td>Land coordinates only</td><td>India</td></tr>
+        <tr><td>Copernicus Sentinel-2 (EU Space Agency)</td><td>Satellite crop-health imagery (NDVI)</td><td>Land coordinates only — no personal identifier</td><td>European Union</td></tr>
+        <tr><td>Open-Meteo</td><td>Weather data</td><td>Land coordinates only — no personal identifier</td><td>European Union</td></tr>
+        <tr><td>Sarvam AI</td><td>Voice/text AI processing (when enabled)</td><td>The specific voice clip or text being processed, not account/profile data</td><td>India</td></tr>
+        <tr><td>Anthropic (Claude)</td><td>Fallback AI processing for crop identification and agronomy reasoning (when enabled)</td><td>The specific prompt/image being processed, not account/profile data</td><td>United States</td></tr>
+        <tr><td>Mappls (MapmyIndia)</td><td>Static map background images</td><td>Land coordinates only</td><td>India</td></tr>
+        <tr><td>Site24x7 (Zoho Corp)</td><td>Crash/error log storage</td><td>Diagnostic data — never includes phone number, land data, or financial data</td><td>India</td></tr>
+      </table>
+      <p>We use India-based providers wherever a suitable one exists. Satellite imagery and weather use EU-based providers; only anonymous coordinates are sent to them, never anything that identifies you.</p>
+    </section>
+
+    <section>
+      <h2>5. Cross-border data transfer</h2>
+      <p>As shown in §4, coordinate data (not linked to your name/phone/account) is sent to EU-based Open-Meteo and Copernicus Sentinel-2, and prompts may be sent to US-based Anthropic when that AI route is active. Everything else — account data, land records, financial data, crash logs — is processed by India-based providers.</p>
+    </section>
+
+    <section>
+      <h2>6. Data retention</h2>
+      <p>We retain your account and land/expense data for as long as your account is active. You can delete your account at any time from the app (Manage → Access → Delete account). Deletion is immediate: your login and profile are removed right away, and if you're the owner of your group, every land, contractor, and expense record in that group is deleted with it. If you're a manager/viewer added to someone else's group, deleting your account removes only your own login. There's no retention window beyond standard database backup rotation.</p>
+    </section>
+
+    <section>
+      <h2>7. About contractor data</h2>
+      <p>If you (a farmer or group admin) add a contractor's name and mobile number, you're providing another person's personal data to us. You're responsible for having a lawful basis to share it.</p>
+    </section>
+
+    <section>
+      <h2>8. Your rights</h2>
+      <p>Under the DPDP Act, you have the right to access, correct, or request erasure of your data; withdraw consent; and raise a grievance.</p>
+      <p>To exercise these rights, contact our Grievance Officer: KhetSaathi Support Team, <a href="mailto:support@khetsaathi.in">support@khetsaathi.in</a>.</p>
+    </section>
+
+    <section>
+      <h2>9. Children</h2>
+      <p>KhetSaathi is intended for adult landholders and their contractors. It is not directed at children, and we do not knowingly collect data from anyone under 18.</p>
+    </section>
+
+    <section>
+      <h2>10. Security</h2>
+      <p>We use industry-standard measures (encrypted connections, Supabase's row-level-security-based access control) to protect your data. No system is 100% secure, and we cannot guarantee absolute security.</p>
+    </section>
+
+    <section>
+      <h2>11. Changes to this policy</h2>
+      <p>We'll update the effective date below when this policy changes, and for material changes, we'll notify users in-app.</p>
+    </section>
+
+    <section>
+      <h2>12. Contact</h2>
+      <p>Questions about this policy: <a href="mailto:support@khetsaathi.in">support@khetsaathi.in</a>.</p>
+    </section>
+  </main>
+  <footer>
+    Effective date: 5 September 2026. This policy is governed by the laws of India.<br />
+    &copy; 2026 KhetSaathi
+  </footer>
+</body>
+</html>
